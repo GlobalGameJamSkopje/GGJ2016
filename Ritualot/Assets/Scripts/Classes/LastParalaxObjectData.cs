@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts.Classes
 {
-    public class Foo
+    public class LastParalaxObjectData
     {
         public float Position { get; set; }
         public float Size { get; set; }

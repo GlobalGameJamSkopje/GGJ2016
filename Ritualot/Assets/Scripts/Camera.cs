@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Camera : MonoBehaviour
+namespace Assets.Scripts
 {
-
-    void Update()
+    public class Camera : MonoBehaviour
     {
-        transform.position = new Vector3(
-             transform.position.x,
-             transform.position.y,
-             transform.position.z + GameManager.GM.GameSpeed * Time.deltaTime);
+        void Update()
+        {
+            transform.position = new Vector3(
+                 transform.position.x,
+                 transform.position.y,
+                 transform.position.z + GameManager.Instance.GameSpeed * Time.deltaTime);
+        }
     }
 }

@@ -1,68 +1,69 @@
-﻿using UnityEngine;
-using System.Linq;
+﻿using System.Linq;
 using Assets.Scripts.Classes;
 using Assets.Scripts.Enums;
-using System;
+using UnityEngine;
 
-public class Collector : MonoBehaviour
+namespace Assets.Scripts
 {
-
-    public GameObject[] WallsLeft;
-    public GameObject[] WallsRight;
-    public GameObject[] Floors;
-
-    private Foo lastLeft;
-    private Foo lastRight;
-    private Foo lastFloor;
-
-    void Awake()
+    public class Collector : MonoBehaviour
     {
-        var lastLeftWall = WallsLeft.Last();
-        var lastRightWall = WallsRight.Last();
-        var lastFloorBotom = Floors.Last();
+        public GameObject[] WallsLeft;
+        public GameObject[] WallsRight;
+        public GameObject[] Floors;
 
-        lastLeft = new Foo
+        private LastParalaxObjectData _lastLeftParalaxObject;
+        private LastParalaxObjectData _lastRightParalaxObject;
+        private LastParalaxObjectData _lastFloorParalaxObject;
+
+        void Awake()
         {
-            Position = lastLeftWall.transform.position.z,
-            Size = lastLeftWall.GetComponent<Collider>().bounds.size.z / 2f
-        };
+            var lastLeft = WallsLeft.Last();
+            var lastRight = WallsRight.Last();
+            var lastFloor = Floors.Last();
 
-        lastRight = new Foo
+            _lastLeftParalaxObject = new LastParalaxObjectData
+            {
+                Position = lastLeft.transform.position.z,
+                Size = lastLeft.GetComponent<Collider>().bounds.size.z / 2f
+            };
+
+            _lastRightParalaxObject = new LastParalaxObjectData
+            {
+                Position = lastRight.transform.position.z,
+                Size = lastRight.GetComponent<Collider>().bounds.size.z / 2f
+            };
+
+            _lastFloorParalaxObject = new LastParalaxObjectData
+            {
+                Position = lastFloor.transform.position.z,
+                Size = lastFloor.GetComponent<Collider>().bounds.size.z / 2f
+            };
+        }
+
+        void OnTriggerEnter(Collider target)
         {
-            Position = lastRightWall.transform.position.z,
-            Size = lastRightWall.GetComponent<Collider>().bounds.size.z / 2f
-        };
+            if (target.tag == Tags.WallLeft.ToString())
+                MoveTargetAfterParalaxObject(target, _lastLeftParalaxObject);
 
-        lastFloor = new Foo
+            else if (target.tag == Tags.WallRight.ToString())
+                MoveTargetAfterParalaxObject(target, _lastRightParalaxObject);
+
+            else if (target.tag == Tags.Floor.ToString())
+                MoveTargetAfterParalaxObject(target, _lastFloorParalaxObject);
+
+        }
+
+        private void MoveTargetAfterParalaxObject(Collider target, LastParalaxObjectData paralaxObject)
         {
-            Position = lastFloorBotom.transform.position.z,
-            Size = lastFloorBotom.GetComponent<Collider>().bounds.size.z / 2f
-        };
-    }
+            Vector3 targetPosition = target.transform.position;
+            float targetSize = target.bounds.size.z / 2f;
 
-    // Update is called once per frame
-    void OnTriggerEnter(Collider target)
-    {
-        Debug.Log(target.tag);
-        if (target.tag == Tags.WallLeft.ToString())
-            DoSomethingWithFoo(target, lastLeft);
-        else if (target.tag == Tags.WallRight.ToString())
-            DoSomethingWithFoo(target, lastRight);
-        else if (target.tag == Tags.Floor.ToString())
-            DoSomethingWithFoo(target, lastFloor);
+            targetPosition.z = paralaxObject.Position + paralaxObject.Size + targetSize;
+            target.transform.position = targetPosition;
 
-    }
-
-    private void DoSomethingWithFoo(Collider target, Foo lastElement)
-    {
-        Vector3 targetPosition = target.transform.position;
-        float targetSize = target.bounds.size.z / 2f;
-
-        targetPosition.z = lastElement.Position + lastElement.Size + targetSize;
-        target.transform.position = targetPosition;
-
-        lastElement.Position = targetPosition.z;
-        lastElement.Size = targetSize;
+            paralaxObject.Position = targetPosition.z;
+            paralaxObject.Size = targetSize;
+        }
     }
 }
 

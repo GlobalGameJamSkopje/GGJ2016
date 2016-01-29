@@ -1,25 +1,17 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class Player : MonoBehaviour
+namespace Assets.Scripts
 {
-
-    void Start()
+    public class Player : MonoBehaviour
     {
+        void Update()
+        {
+            transform.Translate(Input.GetAxis("Horizontal") * 10f * Time.deltaTime, 0, 0);
 
+            transform.position = new Vector3(
+                Mathf.Clamp(transform.position.x, -6, 6),
+                transform.position.y,
+                transform.position.z);
+        }
     }
-
-    void Update()
-    {
-        
-        transform.Translate(Input.GetAxis("Horizontal") * 10f * Time.deltaTime, 0, 0);
-
-        transform.position = new Vector3(
-            Mathf.Clamp(transform.position.x, -6, 6),
-            transform.position.y,
-            transform.position.z);
-
-    }
-
-
 }
