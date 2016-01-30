@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -21,6 +22,12 @@ namespace Assets.Scripts
                 Mathf.Clamp(transform.position.x, -4, 4),
                 transform.position.y,
                 transform.position.z);
+        }
+
+        void OnCollisionEnter(Collision coll)
+        {
+            Debug.Log("HIT");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
