@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
-    public class SceneManager : MonoBehaviour
+    public class HomeSceneManager : MonoBehaviour
     {
         public GameObject Intro, CharacterInfo, MissionMenu;
 
@@ -24,7 +25,7 @@ namespace Assets.Scripts
         }
         public void LoadRunner()
         {
-            Application.LoadLevel(1);
+            SceneManager.LoadScene("RunnerScene");  
         }
     }
 }
