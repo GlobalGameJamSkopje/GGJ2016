@@ -15,6 +15,7 @@ TagManager:
   - MissionMenu
   - Avatar
   - AvatarText
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX

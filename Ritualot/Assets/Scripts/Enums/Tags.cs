@@ -12,6 +12,7 @@
         CharacterInfo,
         MissionMenu,
         Avatar,
-        AvatarText
+        AvatarText,
+        MovingPlatform
     }
 }
