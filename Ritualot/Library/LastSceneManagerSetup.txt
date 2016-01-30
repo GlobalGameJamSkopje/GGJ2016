@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/Ditta'sBedChamber.unity
+- path: Assets/_Scenes/RunnerScene.unity
   isLoaded: 1
   isActive: 1
