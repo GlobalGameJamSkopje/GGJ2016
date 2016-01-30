@@ -4,9 +4,9 @@ namespace Assets.Scripts
 {
     public class RunnerSpawnTrees : MonoBehaviour
     {
-        public GameObject[] Trees;
+        public GameObject Trees;
 
-        private float _spawnTime = 0.25f;
+        private float _spawnTime = 0.2f;
         private float _time;
 
         void Update()
@@ -15,11 +15,17 @@ namespace Assets.Scripts
 
             if (_time >= _spawnTime)
             {
-                int random = Random.Range(0, Trees.Length * 10);
                 Instantiate(
-                    Trees[random % 3],
+                    Trees,
                     new Vector3(
-                        this.transform.position.x + ((random < Trees.Length * 5) ? -5.5f : 5.5f),
+                        this.transform.position.x - 5.8f,
+                        this.transform.position.y,
+                        this.transform.position.z),
+                    new Quaternion());
+                Instantiate(
+                    Trees,
+                    new Vector3(
+                        this.transform.position.x + 5.8f,
                         this.transform.position.y,
                         this.transform.position.z),
                     new Quaternion());
