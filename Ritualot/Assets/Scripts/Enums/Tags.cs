@@ -7,6 +7,11 @@
         WallRight,
         Floor,
         Friendly,
-        Enemy
+        Enemy,
+        Intro,
+        CharacterInfo,
+        MissionMenu,
+        Avatar,
+        AvatarText
     }
 }

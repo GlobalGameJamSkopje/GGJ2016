@@ -6,43 +6,41 @@ namespace Assets.Scripts
 {
     public class RpgTextWritter : MonoBehaviour
     {
+        public string[] AdditionalLines;
+
         private Text _guiText;
-
         private int _currentPosition = 0;
-        private float _delay = 0.1f;
+        private float _delay = 0.06f; //~15 chars per second
         private string _text = "";
-        private string[] _additionalLines;
-
-        private void WriteText(string text)
-        {
-            _guiText.text = "";
-            _currentPosition = 0;
-            _text = text;
-        }
-
+        
         public void Awake()
         {
             _guiText = gameObject.GetComponent<Text>();
         }
 
-        public void Start()
+        public IEnumerator Start()
         {
-            foreach (var line in _additionalLines)
-                _text += line;
+            foreach (var line in AdditionalLines)
+                _text += line + "\n";
 
             while (true)
-            {
+            {                
                 if (_currentPosition < _text.Length)
-                {
-                    _guiText.text += _text[_currentPosition++];
-                    StartCoroutine(DelayTextWrite());
-                }
+                   _guiText.text += _text[_currentPosition++];
+
+                yield return new WaitForSeconds(_delay);
             }
         }
 
-        IEnumerator DelayTextWrite()
+        public void InstantGuiText()
         {
-            yield return new WaitForSeconds(_delay);
+            _guiText.text = "";
+            _text = "";
+
+            foreach (var line in AdditionalLines)
+                _text += line + "\n";
+
+            _guiText.text = _text;
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Assets.Scripts
         public static GameManager Instance;
 
         public float GameSpeed = 20;
-
+                        
         void Awake()
         {
             if (Instance == null)
@@ -17,6 +17,6 @@ namespace Assets.Scripts
                 Destroy(this);
 
             DontDestroyOnLoad(gameObject);
-        }
+        }        
     }
 }
