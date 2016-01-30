@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace Assets.Scripts
@@ -9,10 +10,11 @@ namespace Assets.Scripts
 
         void Awake()
         {
-            _navigationIndex = EditorApplication.currentScene.StartsWith("Inverse") ? 1 : -1;
+            _navigationIndex = EditorSceneManager.GetActiveScene().name == "InverseRunnerScene" ? -1 : 1;
         }
         void Update()
         {
+            Debug.Log(_navigationIndex);
             transform.Translate(Input.GetAxis("Horizontal") * _navigationIndex * 10f * Time.deltaTime, 0, 0);
 
             transform.position = new Vector3(
