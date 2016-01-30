@@ -6,7 +6,7 @@ namespace Assets.Scripts
     {
         public GameObject Trees;
 
-        private float _spawnTime = 0.2f;
+        private float _spawnTime = 0.16f;
         private float _time;
 
         void Update()

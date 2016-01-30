@@ -51,6 +51,10 @@ namespace Assets.Scripts
             else if (target.tag == Tags.Floor.ToString())
                 MoveTargetAfterParalaxObject(target, _lastFloorParalaxObject);
 
+            else if (target.tag == Tags.Enemy.ToString())
+            {
+                Destroy(target.gameObject);
+            }
         }
 
         private void MoveTargetAfterParalaxObject(Collider target, LastParalaxObjectData paralaxObject)
