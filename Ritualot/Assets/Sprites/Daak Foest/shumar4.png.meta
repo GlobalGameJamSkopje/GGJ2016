@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: c226dc8fd3e7dbc4593181036b83cb0e
+timeCreated: 1454240768
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: shumar4_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: shumar4_0
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 248
+        width: 428
+        height: 600
+      alignment: 9
+      pivot: {x: 0.46233103, y: 0.0019192505}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1.8776855, y: 195.84845}
+        - {x: -17.877686, y: 321.84845}
+        - {x: 90.122314, y: 247.84845}
+        - {x: 43.122314, y: 231.84845}
+        - {x: 12.122314, y: 254.84845}
+        - {x: 5.1223145, y: 246.84845}
+        - {x: 16.122314, y: 208.84845}
+        - {x: 43.122314, y: 168.84845}
+        - {x: 82.122314, y: 138.84845}
+        - {x: 147.12231, y: 171.84845}
+        - {x: 230.12231, y: 229.84845}
+        - {x: 230.12231, y: 263.84845}
+        - {x: 229.12231, y: 270.84845}
+        - {x: 190.12231, y: 334.84845}
+        - {x: 179.12231, y: 342.84845}
+        - {x: 172.12231, y: 343.84845}
+        - {x: 118.122314, y: 261.84845}
+        - {x: 81.122314, y: 342.84845}
+        - {x: 58.122314, y: 364.84845}
+        - {x: 27.122314, y: 423.84845}
+        - {x: 20.122314, y: 472.84845}
+        - {x: -22.877686, y: 563.84845}
+        - {x: -57.877686, y: 598.84845}
+        - {x: -97.877686, y: 598.84845}
+        - {x: -149.87769, y: 554.84845}
+        - {x: -129.87769, y: 511.84845}
+        - {x: -189.87769, y: 490.84845}
+        - {x: -197.87769, y: 460.84845}
+        - {x: -197.87769, y: 409.84845}
+        - {x: -160.87769, y: 389.84845}
+        - {x: -145.87769, y: 291.84845}
+        - {x: -178.87769, y: 238.84845}
+        - {x: -179.87769, y: 178.84845}
+        - {x: -159.87769, y: 138.84845}
+        - {x: -131.87769, y: 139.84845}
+        - {x: -138.87769, y: 40.84845}
+        - {x: -123.877686, y: -1.1515503}
+        - {x: -74.877686, y: -1.1515503}
+        - {x: -18.877686, y: 8.84845}
+        - {x: -18.877686, y: 186.84845}
+        - {x: -10.877686, y: 183.84845}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

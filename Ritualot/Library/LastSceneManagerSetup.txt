@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/PlatformerVampireStocking.unity
+- path: Assets/_Scenes/RunnerVonDitta.unity
   isLoaded: 1
   isActive: 1

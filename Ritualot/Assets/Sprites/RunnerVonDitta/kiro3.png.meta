@@ -1,0 +1,99 @@
+fileFormatVersion: 2
+guid: e3aff243a830dec4682529aafeb567b6
+timeCreated: 1454244093
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: kiro3_0
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: kiro3_0
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 128
+        width: 345
+        height: 608
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 9.5, y: 228}
+        - {x: 21.5, y: 213}
+        - {x: 39.5, y: 192}
+        - {x: 70.5, y: 204}
+        - {x: 76.5, y: 213}
+        - {x: 80.5, y: 385}
+        - {x: 81.5, y: 465}
+        - {x: 116.5, y: 421}
+        - {x: 149.5, y: 394}
+        - {x: 172.5, y: 408}
+        - {x: 172.5, y: 438}
+        - {x: 108.5, y: 524}
+        - {x: 71.5, y: 562}
+        - {x: 32.5, y: 608}
+        - {x: -41.5, y: 608}
+        - {x: -134.5, y: 506}
+        - {x: -172.5, y: 429}
+        - {x: -172.5, y: 395}
+        - {x: -153.5, y: 376}
+        - {x: -137.5, y: 379}
+        - {x: -88.5, y: 450}
+        - {x: -72.5, y: 426}
+        - {x: -56.5, y: 214}
+        - {x: -45.5, y: 88}
+        - {x: -24.5, y: 10}
+        - {x: -13.5, y: 0}
+        - {x: 22.5, y: 0}
+        - {x: 50.5, y: 32}
+        - {x: 13.5, y: 126}
+        - {x: 23.5, y: 204}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
