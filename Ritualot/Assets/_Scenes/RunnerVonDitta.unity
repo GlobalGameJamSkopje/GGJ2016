@@ -843,12 +843,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fabaa2bfc488624bb52fceb9f72e88c, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &923399948 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11458022, guid: 1fabaa2bfc488624bb52fceb9f72e88c,
-    type: 2}
-  m_PrefabInternal: {fileID: 923399947}
-  m_Script: {fileID: 11500000, guid: 62f213db0f9f77a41adb24686c414395, type: 3}
 --- !u!1001 &949340489
 Prefab:
   m_ObjectHideFlags: 0
@@ -2385,7 +2379,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 923399948}
+      - m_Target: {fileID: 1166642946}
         m_MethodName: StartVonDittaRoom
         m_Mode: 1
         m_Arguments:

@@ -1643,8 +1643,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AdditionalLines:
   - 'Vladymyr:'
-  - As a matter of fact I always keep a Semag summoning scroll at hand,
-  - only thing is, I'm missing some key ingredients to perform the summoning ritual.
+  - As a matter of fact I always keep a Semag summoning scroll at hand, only thing
+    is, I'm missing some key ingredients to perform the summoning ritual.
 --- !u!114 &346809705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6453,7 +6453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5824503, g: 0.6342732, b: 0.97794116, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

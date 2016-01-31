@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
+using UnityStandardAssets._2D;
 
-namespace UnityStandardAssets._2D
+namespace Assets.Standard_Assets._2D.Scripts
 {
     public class Camera2DFollow : MonoBehaviour
     {

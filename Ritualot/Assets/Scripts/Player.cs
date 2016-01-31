@@ -1,6 +1,4 @@
-﻿using UnityEditor;
-using UnityEditor.SceneManagement;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
@@ -11,7 +9,7 @@ namespace Assets.Scripts
 
         void Awake()
         {
-            _navigationIndex = EditorSceneManager.GetActiveScene().name == "InverseRunnerScene" ? -1 : 1;
+            _navigationIndex = SceneManager.GetActiveScene().name == "InverseRunnerScene" ? -1 : 1;
         }
         void Update()
         {

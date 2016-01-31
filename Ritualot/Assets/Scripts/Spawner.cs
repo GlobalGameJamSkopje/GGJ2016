@@ -79,5 +79,9 @@ namespace Assets.Scripts
                     this.transform.position.z),
                 new Quaternion());
         }
+        public void StartVonDittaRoom()
+        {
+            SceneManager.LoadScene("Ditta'sBedChamber");
+        }
     }
 }
