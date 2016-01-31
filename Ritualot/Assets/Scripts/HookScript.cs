@@ -2,19 +2,22 @@
 using System.Collections;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
     public class HookScript : MonoBehaviour
     {
+        public Animator HookPanel;
         private float _boxSpeed = 1f;
         private float _forceSpeed = 0.3f;
         private bool _flag = true;
+        private bool _iWon = false;
 
         private bool _canRotate = true;
         private bool _canShowForce = false;
 
-        private float _winAngle = -0.25f;
+        private float _winAngle = 0.25f;
         private float _winAngleThreshold = 0.05f;
         private float _winForce = 0.7f;
         private float _winForceThreshold = 0.1f;
@@ -49,9 +52,19 @@ namespace Assets.Scripts
                 _canShowForce = false;
 
                 if (IsCorrectAngle() && IsCorrectForce())
-                    Debug.Log("Bravo go pogodi agolot i force-to" + transform.rotation.z + "  " + ForceImage.fillAmount);
+                {
+                    HookPanel.SetTrigger("Do");
+                    _iWon = true;
+                }
+                //Debug.Log("Bravo go pogodi agolot i force-to" + transform.rotation.z + "  " + ForceImage.fillAmount);
+
                 else
+                {
                     Debug.Log("BOT");
+                    HookPanel.SetTrigger("Do");
+                    _iWon = false;
+                }
+                    
             }
         }
 
@@ -106,6 +119,15 @@ namespace Assets.Scripts
 
             return forceFillAmount;
         }
+
+        public void CheckIfHit()
+        {
+            if(_iWon)
+            {
+                SceneManager.LoadScene("InsideDitta'sCloset");
+            }
+        }
+
     }
 }
 

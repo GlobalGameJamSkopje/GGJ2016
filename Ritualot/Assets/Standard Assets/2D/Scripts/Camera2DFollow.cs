@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 namespace UnityStandardAssets._2D
 {
@@ -100,6 +102,12 @@ namespace UnityStandardAssets._2D
         {
             CharacterSelectedAnimator.SetTrigger("Do");
         }
+
+        public void LoadRunnerDeathHall()
+        {
+            SceneManager.LoadScene("RunnerVonDitta");
+        }
+
 
     }
 }

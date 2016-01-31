@@ -8,4 +8,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/HomeScene.unity
   - enabled: 1
+    path: Assets/_Scenes/Ditta'sBedChamber.unity
+  - enabled: 1
+    path: Assets/_Scenes/InsideDitta'sCloset.unity
+  - enabled: 1
+    path: Assets/_Scenes/InverseRunnerScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/PlatformerVampireStocking.unity
+  - enabled: 1
     path: Assets/_Scenes/RunnerScene.unity
+  - enabled: 1
+    path: Assets/_Scenes/RunnerVonDitta.unity
