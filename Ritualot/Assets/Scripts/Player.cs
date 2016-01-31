@@ -15,7 +15,6 @@ namespace Assets.Scripts
         }
         void Update()
         {
-            Debug.Log(_navigationIndex);
             transform.Translate(Input.GetAxis("Horizontal") * _navigationIndex * 10f * Time.deltaTime, 0, 0);
 
             transform.position = new Vector3(
