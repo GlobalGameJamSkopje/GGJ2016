@@ -10,6 +10,7 @@ namespace Assets.Scripts
         public GameObject Intro, CharacterIntro, CharacterInfo, MissionMenu, StockingIntro;
         public GameObject StockingIntroCharacterText, StockingIntroChooseCharacter, StockingIntroCharacterChosen;
         public GameObject CharacterButton;
+        public GameObject FirstMissionText;
 
         public void ActivateCharacterIntro()
         {
@@ -74,6 +75,14 @@ namespace Assets.Scripts
         public void LoadRunner()
         {
             SceneManager.LoadScene("RunnerScene");  
+        }
+        public void Start()
+        {
+            if(GameManager.Instance.Finished)
+            {
+                ActivateMissionMenu();
+                FirstMissionText.SetActive(true);
+            }
         }
     }
 }

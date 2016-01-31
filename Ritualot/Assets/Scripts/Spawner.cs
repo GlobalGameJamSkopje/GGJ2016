@@ -17,6 +17,8 @@ namespace Assets.Scripts
         private float _currentBlockageSpawnTime;
         private float _currentTime;
 
+        public bool NavigateToScene = false;
+        
         void Update()
         {
             _currentSpawnTime += Time.deltaTime;
@@ -42,13 +44,21 @@ namespace Assets.Scripts
             }
             if (_currentTime > EndTime)
             {
-                EndRunPanel.SetActive(true);
-                var enemies = GameObject.FindGameObjectsWithTag(Enums.Tags.Enemy.ToString());
-                foreach (var item in enemies)
+                if (NavigateToScene)
                 {
-                    Destroy(item);
+                    GameManager.Instance.Finished = true;
+                    SceneManager.LoadScene("HomeScene");
                 }
-                this.enabled = false;
+                else
+                {
+                    EndRunPanel.SetActive(true);
+                    var enemies = GameObject.FindGameObjectsWithTag(Enums.Tags.Enemy.ToString());
+                    foreach (var item in enemies)
+                    {
+                        Destroy(item);
+                    }
+                    this.enabled = false;
+                }                
             }
         }
 

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
@@ -7,7 +8,9 @@ namespace Assets.Scripts
         public static GameManager Instance;
 
         public float GameSpeed = 20;
-                        
+
+        public bool Finished { get; set; }
+
         void Awake()
         {
             if (Instance == null)
@@ -17,6 +20,16 @@ namespace Assets.Scripts
                 Destroy(this);
 
             DontDestroyOnLoad(gameObject);
-        }        
+        }
+        public void StartPlatformer()
+        {
+            SceneManager.LoadScene("PlatformerVampireStocking");
+        }
+        public void StartVonDittaRoom()
+        {
+            SceneManager.LoadScene("Ditta'sBedChamber");
+        }
     }
+
+    
 }

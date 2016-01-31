@@ -8,6 +8,7 @@ namespace Assets.Scripts
         private bool _flag = true;
         private GameObject _parent;
         private float _speed = 0.3f;
+        public GameObject QueenWakeUp;
 
         void Start()
         {
@@ -24,6 +25,10 @@ namespace Assets.Scripts
                 _flag = !_flag;
 
             _parent.transform.Translate(0, Input.GetAxis("Vertical") * 10f * Time.deltaTime, 0);
+        }
+        public void OnCollisionEnter2D(Collision2D target)
+        {
+            QueenWakeUp.SetActive(true);
         }
     }
 }

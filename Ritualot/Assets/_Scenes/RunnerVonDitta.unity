@@ -843,6 +843,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1fabaa2bfc488624bb52fceb9f72e88c, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &923399948 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11458022, guid: 1fabaa2bfc488624bb52fceb9f72e88c,
+    type: 2}
+  m_PrefabInternal: {fileID: 923399947}
+  m_Script: {fileID: 11500000, guid: 62f213db0f9f77a41adb24686c414395, type: 3}
 --- !u!1001 &949340489
 Prefab:
   m_ObjectHideFlags: 0
@@ -1243,11 +1249,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SideObject: {fileID: 144282, guid: 25ac732ad0740224f8d5a38df64245dc, type: 2}
-  Blockage: {fileID: 136610, guid: cf92ca637b743c24497545dae2e573ad, type: 2}
+  Blockage: {fileID: 144282, guid: 6f10914017e6cf6448024171a2a56ce8, type: 2}
   EndRunPanel: {fileID: 1750548756}
   SpawnTimeSideObject: 1
   BlockageSpawnTime: 1
   EndTime: 20
+  NavigateToScene: 0
 --- !u!1001 &1243889617
 Prefab:
   m_ObjectHideFlags: 0
@@ -1999,7 +2006,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 1c97e9e75fa049e428945d163aa3a9c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2377,7 +2384,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2100193276}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 923399948}
+        m_MethodName: StartVonDittaRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2100193276
