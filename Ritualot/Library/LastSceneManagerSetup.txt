@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scenes/HomeScene.unity
+- path: Assets/_Scenes/PlatformerVampireStocking.unity
   isLoaded: 1
   isActive: 1
